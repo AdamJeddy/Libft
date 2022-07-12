@@ -11,7 +11,7 @@ int main()
 	char str4[] = "AABA";
 	char empty[40];
 
-	
+	/*
     printf("*** ft_isalpaha test ***\n");
     printf("Should give 1\n");
 		printf("\tA: %d\n", ft_isalpha('A'));
@@ -110,7 +110,6 @@ int main()
 		printf("AA & AA (2) => %d\n", ft_strncmp(str3, str4, 2));
 		printf("%s & AAA (10) => %d\n", str3, ft_strncmp(str3, "AAA", 10));
 		printf("[] & [] => %d\n", ft_strncmp("", "", 2));
-	
 
 	printf("\n\n*** ft_strlcpy ***\n");
 		printf("before => %s\n", empty);
@@ -119,7 +118,10 @@ int main()
 		printf("before => %s\n", empty);
 		ft_strlcpy(empty, str2, 4);
 		printf("after  => %s\n\n", empty);
+*/
 
+	printf("\n\n*** ft_strlcat ***\n");
+	
 
 	return 0;
 }
