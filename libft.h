@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/07/12 14:38:33 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/07/12 17:24:04 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(char *str, int num);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 char	*ft_strrchr(char *str, int num);
-void	*ft_memset(void *str, int ch, int n);
+void	*ft_memset(void *str, int ch, unsigned int n);
 
 #endif
