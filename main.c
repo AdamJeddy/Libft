@@ -207,9 +207,21 @@ int main()
 		printf("dest = '%s'\n", str);
 		printf("src  = '%s'\n", empty_1);
 		printf("---\n");
+
+	printf(COLOR_MAGENTA "\n\n*** ft_memcmp ***\n" COLOR_RESET);
+	printf("'%s' == '%s' (3): %d | %d\n", "ABC", "ABC", ft_memcmp("ABC", "ABC", 3), memcmp("ABC", "ABC", 3));
+	printf("'%s' == '%s' (0): %d | %d\n", "ABC", "ABC", ft_memcmp("ABC", "ABC", 0), memcmp("ABC", "ABC", 0));
+	printf("'%s' == '%s' (%d): %d | %d\n", "", "", 10, ft_memcmp("", "", 10), memcmp("", "", 10));
+	printf("'%s' == '%s' (%d): %d | %d\n", "A", "", 10, ft_memcmp("A", "", 10), memcmp("A", "", 10));
+	printf("'%s' == '%s' (%d): %d | %d\n", "", "A", 10, ft_memcmp("", "A", 10), memcmp("", "A", 10));
+	int n = 8;
+	char temp1[]  = "ABCD E";
+	char temp2[] = "ABCD EF";
+	printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
+	printf("'%s' == '%s' (%d): %d | %d\n", temp2, temp1, n, ft_memcmp(temp2, temp1, n), memcmp(temp2, temp1, n));
+	n = 4;printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
 */
-
 	
-
+	
 	return 0;
 }
