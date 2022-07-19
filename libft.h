@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/07/12 17:24:04 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/07/19 12:15:10 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 
 void	*ft_memset(void *str, int ch, size_t n);
+void	*ft_memchr(const void *str, int ch, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 #endif
