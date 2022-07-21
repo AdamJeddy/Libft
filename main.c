@@ -34,6 +34,8 @@ void reset_str()
 		empty_1[i++] = '\0';
 }
 
+void ft_strlcat_test();
+
 int main()
 {
 
@@ -225,3 +227,127 @@ int main()
 	
 	return 0;
 }
+
+
+void ft_strlcat_test()
+{
+	int test_arr[] = {-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100};
+	int ret_size1, ret_size2 = ret_size1 = 0;
+	printf("Strings with the same size\n");
+	char *s1_1 = str3, 	*s2_1 = str4;
+	char *s1_2 = str3_1, *s2_2 = str4_1;
+	for (int i = 0; i < (sizeof(test_arr) / sizeof(int)); i++)
+	{
+		ret_size1 = ft_strlcat(s1_1, s2_1, test_arr[i]);
+		ret_size2 = strlcat(s1_2, s2_2, test_arr[i]);
+		if (strcmp(s1_1, s1_2) == 0 && strcmp(s2_1, s2_2) == 0 && ret_size1 == ret_size2)
+			printf(COLOR_GREEN     "[X] "     COLOR_RESET);
+		else
+		{
+			printf(COLOR_RED     "\n[X] Test Failed" COLOR_RESET " - Test case: " COLOR_YELLOW "%d\n" COLOR_RESET, test_arr[i]);
+			if (strcmp(s1_1, s1_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s1_1, s1_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s1_1, s1_2);
+			if(strcmp(s2_1, s2_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s2_1, s2_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s2_1, s2_2);
+			if (ret_size1 != ret_size2)
+				printf(COLOR_RED     "\tft_strlcat: %d\tstrlcat: %d\n" COLOR_RESET, ret_size1, ret_size2);
+			else
+				printf("\tft_strlcat: %d\tstrlcat: %d\n", ret_size1, ret_size2);
+		}
+		ret_size2 = ret_size1 = 0;
+		reset_str();
+	}
+
+
+	printf("\n\nStrings with different sizes\n");
+	s1_1 = str3, 	s2_1 = str2;
+	s1_2 = str3_1, 	s2_2 = str2_1;
+	for (int i = 0; i < (sizeof(test_arr) / sizeof(int)); i++)
+	{
+		ret_size1 = ft_strlcat(s1_1, s2_1, test_arr[i]);
+		ret_size2 = strlcat(s1_2, s2_2, test_arr[i]);
+		if (strcmp(s1_1, s1_2) == 0 && strcmp(s2_1, s2_2) == 0 && ret_size1 == ret_size2)
+			printf(COLOR_GREEN     "[X] "     COLOR_RESET);
+		else
+		{
+			printf(COLOR_RED     "\n[X] Test Failed" COLOR_RESET " - Test case: " COLOR_YELLOW "%d\n" COLOR_RESET, test_arr[i]);
+			if (strcmp(s1_1, s1_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s1_1, s1_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s1_1, s1_2);
+			if(strcmp(s2_1, s2_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s2_1, s2_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s2_1, s2_2);
+			if (ret_size1 != ret_size2)
+				printf(COLOR_RED     "\tft_strlcat: %d\tstrlcat: %d\n" COLOR_RESET, ret_size1, ret_size2);
+			else
+				printf("\tft_strlcat: %d\tstrlcat: %d\n", ret_size1, ret_size2);
+		}
+		ret_size2 = ret_size1 = 0;
+		reset_str();
+	}
+	s1_1 = str3_1, 	s2_1 = str2_1;
+	s1_2 = str3, 	s2_2 = str2;
+	for (int i = 0; i < (sizeof(test_arr) / sizeof(int)); i++)
+	{
+		ret_size1 = ft_strlcat(s1_1, s2_1, test_arr[i]);
+		ret_size2 = strlcat(s1_2, s2_2, test_arr[i]);
+		if (strcmp(s1_1, s1_2) == 0 && strcmp(s2_1, s2_2) == 0 && ret_size1 == ret_size2)
+			printf(COLOR_GREEN     "[X] "     COLOR_RESET);
+		else
+		{
+			printf(COLOR_RED     "\n[X] Test Failed" COLOR_RESET " - Test case: " COLOR_YELLOW "%d\n" COLOR_RESET, test_arr[i]);
+			if (strcmp(s1_1, s1_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s1_1, s1_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s1_1, s1_2);
+			if(strcmp(s2_1, s2_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s2_1, s2_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s2_1, s2_2);
+			if (ret_size1 != ret_size2)
+				printf(COLOR_RED     "\tft_strlcat: %d\tstrlcat: %d\n" COLOR_RESET, ret_size1, ret_size2);
+			else
+				printf("\tft_strlcat: %d\tstrlcat: %d\n", ret_size1, ret_size2);
+		}
+		ret_size2 = ret_size1 = 0;
+		reset_str();
+	}
+
+	
+	printf("\n\nStrings & Empty string\n");
+	s1_1 = str3, 	s2_1 = empty;
+	s1_2 = str3_1, 	s2_2 = empty_1;
+	for (int i = 0; i < (sizeof(test_arr) / sizeof(int)); i++)
+	{
+		ret_size1 = ft_strlcat(s1_1, s2_1, test_arr[i]);
+		ret_size2 = strlcat(s1_2, s2_2, test_arr[i]);
+		if (strcmp(s1_1, s1_2) == 0 && strcmp(s2_1, s2_2) == 0 && ret_size1 == ret_size2)
+			printf(COLOR_GREEN     "[X] "     COLOR_RESET);
+		else
+		{
+			printf(COLOR_RED     "\n[X] Test Failed" COLOR_RESET " - Test case: " COLOR_YELLOW "%d\n" COLOR_RESET, test_arr[i]);
+			if (strcmp(s1_1, s1_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s1_1, s1_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s1_1, s1_2);
+			if(strcmp(s2_1, s2_2) != 0)
+				printf(COLOR_RED     "\tft_strlcat: %s\tstrlcat: %s\n" COLOR_RESET, s2_1, s2_2);
+			else
+				printf("\tft_strlcat: %s\tstrlcat: %s\n", s2_1, s2_2);
+			if (ret_size1 != ret_size2)
+				printf(COLOR_RED     "\tft_strlcat: %d\tstrlcat: %d\n" COLOR_RESET, ret_size1, ret_size2);
+			else
+				printf("\tft_strlcat: %d\tstrlcat: %d\n", ret_size1, ret_size2);
+		}
+		ret_size2 = ret_size1 = 0;
+		reset_str();
+	}
+}
+
+
