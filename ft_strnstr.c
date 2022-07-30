@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 17:03:11 by aahsan            #+#    #+#             */
-/*   Updated: 2022/07/19 17:11:55 by aahsan           ###   ########.fr       */
+/*   Created: 2022/07/30 14:08:01 by aahsan            #+#    #+#             */
+/*   Updated: 2022/07/30 21:21:20 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+char    *ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	return (dest);
+    
 }

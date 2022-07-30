@@ -1,4 +1,4 @@
-
+*.out
 *.o
 *.exe
 .vscode/configurationCache.log

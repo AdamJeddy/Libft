@@ -191,11 +191,10 @@ int main()
 
 	printf(COLOR_MAGENTA "\n\n*** ft_memchr ***\n" COLOR_RESET);
 		printf(COLOR_CYAN "Test string:" COLOR_RESET "\n\tdest: '%s'\n\tsrc: '%s'\n", str2, str3);
-		printf("---\nReplace 4 characters\n");
+		printf("Replace 4 characters\n");
 		ft_memcpy(str2, str3, 4);
 		printf("dest = '%s'\n", str2);
-		printf("src  = '%s'\n", str3);
-		printf("---\n");
+		printf("src  = '%s'\n\n", str3);
 		reset_str();
 		printf("Replace 0 characters\n");
 		ft_memcpy(str2, str3, 0);
@@ -204,7 +203,7 @@ int main()
 		printf("---\n");
 		reset_str();
 		printf(COLOR_CYAN "Test string:" COLOR_RESET "\n\tdest: '%s'\n\tsrc: '%s'\n", str, empty_1);
-		printf("---\nReplace 5 characters\n");
+		printf("Replace 5 characters\n");
 		ft_memcpy(str, empty_1, 10);
 		printf("dest = '%s'\n", str);
 		printf("src  = '%s'\n", empty_1);
@@ -222,13 +221,20 @@ int main()
 	printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
 	printf("'%s' == '%s' (%d): %d | %d\n", temp2, temp1, n, ft_memcmp(temp2, temp1, n), memcmp(temp2, temp1, n));
 	n = 4;printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
-*/
 	
+	printf(COLOR_MAGENTA "\n\n*** ft_memmove ***\n" COLOR_RESET);
+		printf(COLOR_CYAN "str3 before ft_memmove:" COLOR_RESET " %s\n", str3);
+		ft_memmove(str3, str4, sizeof(str4));
+		printf(COLOR_CYAN "str3 after ft_memmove:" COLOR_RESET " %s\n", str3);
+		reset_str();
+*/
+	printf(COLOR_MAGENTA "\n\n*** ft_strnstr ***\n" COLOR_RESET);
+
 	
 	return 0;
 }
 
-
+/*
 void ft_strlcat_test()
 {
 	int test_arr[] = {-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100};
@@ -350,4 +356,4 @@ void ft_strlcat_test()
 	}
 }
 
-
+*/
