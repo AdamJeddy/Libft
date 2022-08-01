@@ -210,29 +210,46 @@ int main()
 		printf("---\n");
 
 	printf(COLOR_MAGENTA "\n\n*** ft_memcmp ***\n" COLOR_RESET);
-	printf("'%s' == '%s' (3): %d | %d\n", "ABC", "ABC", ft_memcmp("ABC", "ABC", 3), memcmp("ABC", "ABC", 3));
-	printf("'%s' == '%s' (0): %d | %d\n", "ABC", "ABC", ft_memcmp("ABC", "ABC", 0), memcmp("ABC", "ABC", 0));
-	printf("'%s' == '%s' (%d): %d | %d\n", "", "", 10, ft_memcmp("", "", 10), memcmp("", "", 10));
-	printf("'%s' == '%s' (%d): %d | %d\n", "A", "", 10, ft_memcmp("A", "", 10), memcmp("A", "", 10));
-	printf("'%s' == '%s' (%d): %d | %d\n", "", "A", 10, ft_memcmp("", "A", 10), memcmp("", "A", 10));
-	int n = 8;
-	char temp1[]  = "ABCD E";
-	char temp2[] = "ABCD EF";
-	printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
-	printf("'%s' == '%s' (%d): %d | %d\n", temp2, temp1, n, ft_memcmp(temp2, temp1, n), memcmp(temp2, temp1, n));
-	n = 4;printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
-	
+		printf("'%s' == '%s' (3): %d | %d\n", "ABC", "ABC", ft_memcmp("ABC", "ABC", 3), memcmp("ABC", "ABC", 3));
+		printf("'%s' == '%s' (0): %d | %d\n", "ABC", "ABC", ft_memcmp("ABC", "ABC", 0), memcmp("ABC", "ABC", 0));
+		printf("'%s' == '%s' (%d): %d | %d\n", "", "", 10, ft_memcmp("", "", 10), memcmp("", "", 10));
+		printf("'%s' == '%s' (%d): %d | %d\n", "A", "", 10, ft_memcmp("A", "", 10), memcmp("A", "", 10));
+		printf("'%s' == '%s' (%d): %d | %d\n", "", "A", 10, ft_memcmp("", "A", 10), memcmp("", "A", 10));
+		int n = 8;
+		char temp1[]  = "ABCD E";
+		char temp2[] = "ABCD EF";
+		printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
+		printf("'%s' == '%s' (%d): %d | %d\n", temp2, temp1, n, ft_memcmp(temp2, temp1, n), memcmp(temp2, temp1, n));
+		n = 4;printf("'%s' == '%s' (%d): %d | %d\n", temp1, temp2, n, ft_memcmp(temp1, temp2, n), memcmp(temp1, temp2, n));
+		
 	printf(COLOR_MAGENTA "\n\n*** ft_memmove ***\n" COLOR_RESET);
 		printf(COLOR_CYAN "str3 before ft_memmove:" COLOR_RESET " %s\n", str3);
 		ft_memmove(str3, str4, sizeof(str4));
 		printf(COLOR_CYAN "str3 after ft_memmove:" COLOR_RESET " %s\n", str3);
 		reset_str();
-*/
-	printf(COLOR_MAGENTA "\n\n*** ft_strnstr ***\n" COLOR_RESET);
 
-	
+	printf(COLOR_MAGENTA "\n\n*** ft_strnstr ***\n" COLOR_RESET);
+		printf("\n");
+		const char *largestring = "Foo Bai Bar Baz";
+		const char *smallstring = "Bar";
+		char *ptr = ft_strnstr(largestring, smallstring, 16);
+		ptr ? printf("\n%s\n", ptr) : printf("\nNULL\n");
+
+	printf(COLOR_MAGENTA "\n\n*** ft_atoi ***\n" COLOR_RESET);
+		printf("'   -1': %d\n", ft_atoi("   -1"));
+		printf("'   --1': %d\n", ft_atoi("   --1"));
+		printf("'   -0': %d\n", ft_atoi("   -0"));
+		printf("'   0': %d\n", ft_atoi("   0"));
+		printf("'   1234': %d\n", ft_atoi("   1234"));
+		printf("'   -1234': %d\n", ft_atoi("   -1234"));
+		printf("'-1234a': %d\n", ft_atoi("-1234a"));
+*/
+	printf(COLOR_MAGENTA "\n\n*** ft_calloc ***\n" COLOR_RESET);
+
+
 	return 0;
 }
+
 
 /*
 void ft_strlcat_test()
