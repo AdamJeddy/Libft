@@ -266,7 +266,7 @@ int main()
 		char	*p_strjoin = ft_strjoin(str2, str3);
 		printf("%s\n", p_strjoin);
 		free(p_strjoin);
-*/
+
 	printf(COLOR_MAGENTA "\n\n*** ft_itoa ***\n" COLOR_RESET);
 		printf("%s\n", ft_itoa(-2147483648));
 		printf("%s\n", ft_itoa(-10));
@@ -275,6 +275,8 @@ int main()
 		printf("%s\n", ft_itoa(1));
 		printf("%s\n", ft_itoa(10));
 		printf("%s\n", ft_itoa(100));
+*/
+	printf(COLOR_MAGENTA "\n\n*** ft_itoa ***\n" COLOR_RESET);
 
 	return 0;
 }
