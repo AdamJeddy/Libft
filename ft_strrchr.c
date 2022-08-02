@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 13:30:32 by aahsan            #+#    #+#             */
-/*   Updated: 2022/07/12 13:47:05 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/02 14:21:29 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(char *str, int num)
 	temp = 0;
 	while (*str)
 	{	
-		if (*str == num)
+		if (*str == (char) num)
 			temp = str;
 		str++;
 	}

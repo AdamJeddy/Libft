@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:17:09 by aahsan            #+#    #+#             */
-/*   Updated: 2022/07/12 13:10:05 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/02 14:21:00 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(char *str, int num)
 {
 	while (*str)
-		if (*str++ == num)
+		if (*str++ == (char) num)
 			return (--str);
 	if (*str == '\0' && num == '\0')
 		return (str);

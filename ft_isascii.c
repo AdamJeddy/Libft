@@ -6,13 +6,13 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:00:03 by aahsan            #+#    #+#             */
-/*   Updated: 2022/07/12 12:08:22 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/02 13:07:18 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toascii(int ch)
+int	ft_isascii(int ch)
 {
 	if (ch >= 0 && ch <= 127)
 		return (1);

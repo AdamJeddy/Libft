@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/08/02 11:04:08 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/02 15:09:54 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ int		ft_atoi(const char *str);
 char    *ft_itoa(int n);
 void	ft_bzero(void *s, size_t n);
 
+int		ft_isalnum(int ch);
 int		ft_isalpha(int alpha);
 int		ft_isdigit(int ch);
 int		ft_isprint(int ch);
 
-int		ft_toascii(int ch);
+int		ft_isascii(int ch);
 int		ft_toupper(int ch);
 int		ft_tolower(int ch);
 
@@ -34,9 +35,9 @@ char	        *ft_strchr(char *str, int num);
 char            *ft_strdup(const char *str);
 char        	*ft_strrchr(char *str, int num);
 char            *ft_strnstr(const char *s1, const char *s2, size_t len);
-int		        ft_strncmp(char *s1, char *s2, unsigned int n);
-size_t          ft_strlcat(char *dest, char *src, size_t size);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
+size_t          ft_strlcat(char *dest, const char *src, size_t size);
+unsigned int	ft_strlcpy(char *dest, const char *src, size_t size);
 void            ft_striteri(char *s, void (*f)(unsigned int, char*));
 char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
@@ -49,6 +50,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 
 void    ft_putchar_fd(char c, int fd);

@@ -275,9 +275,19 @@ int main()
 		printf("%s\n", ft_itoa(1));
 		printf("%s\n", ft_itoa(10));
 		printf("%s\n", ft_itoa(100));
+
+	printf(COLOR_MAGENTA "\n\n*** ft_strtrim ***\n" COLOR_RESET);
+		char	*test_str = "+-+-Abcd-+-+";
+		char	*set = "-+";
+		printf(COLOR_CYAN "Test string: " COLOR_RESET "%s\n", test_str);
+		printf(COLOR_CYAN "Set characters: " COLOR_RESET "%s\n", set);
+		char	*v_strtrim = ft_strtrim(test_str, set);
+		printf("'%s' -> '%s'\n", test_str, v_strtrim);
+		free(v_strtrim);
 */
-	printf(COLOR_MAGENTA "\n\n*** ft_itoa ***\n" COLOR_RESET);
-	
+	printf(COLOR_MAGENTA "\n\n*** ft_strtrim ***\n" COLOR_RESET);
+		
+
 	return 0;
 }
 
