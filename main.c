@@ -39,7 +39,7 @@ void ft_strlcat_test();
 int main()
 {
 
-	/*
+/*
     printf("*** ft_isalpaha test ***\n");
     printf("Should give 1\n");
 		printf("\tA: %d\n", ft_isalpha('A'));
@@ -243,9 +243,38 @@ int main()
 		printf("'   1234': %d\n", ft_atoi("   1234"));
 		printf("'   -1234': %d\n", ft_atoi("   -1234"));
 		printf("'-1234a': %d\n", ft_atoi("-1234a"));
-*/
-	printf(COLOR_MAGENTA "\n\n*** ft_calloc ***\n" COLOR_RESET);
 
+	printf(COLOR_MAGENTA "\n\n*** ft_strdup ***\n" COLOR_RESET);
+		char *v_strdup = ft_strdup(str);
+		v_strdup ? printf("%s\n", v_strdup) : printf("NULL\n");
+		free(v_strdup);
+		v_strdup = ft_strdup("\0");
+		v_strdup ? printf("%s\n", v_strdup) : printf("NULL\n");
+		free(v_strdup);
+
+	printf(COLOR_MAGENTA "\n\n*** ft_substr ***\n" COLOR_RESET);
+		printf(COLOR_CYAN "Test string: " COLOR_RESET "I love you\n");
+		char	*p_substr = ft_substr("I love you", 2, 8);
+		printf("start 2 | len 8 -> '%s'\n", p_substr);
+		free(p_substr);
+		p_substr = ft_substr("I love you", 2, 0);
+		printf("start 2 | len 0 -> '%s'\n", p_substr);
+		free(p_substr);
+
+	printf(COLOR_MAGENTA "\n\n*** ft_strjoin ***\n" COLOR_RESET);
+		printf(COLOR_CYAN "Test string: " COLOR_RESET "%s + %s\n", str2, str3);
+		char	*p_strjoin = ft_strjoin(str2, str3);
+		printf("%s\n", p_strjoin);
+		free(p_strjoin);
+*/
+	printf(COLOR_MAGENTA "\n\n*** ft_itoa ***\n" COLOR_RESET);
+		printf("%s\n", ft_itoa(-2147483648));
+		printf("%s\n", ft_itoa(-10));
+		printf("%s\n", ft_itoa(-1));
+		printf("%s\n", ft_itoa(0));
+		printf("%s\n", ft_itoa(1));
+		printf("%s\n", ft_itoa(10));
+		printf("%s\n", ft_itoa(100));
 
 	return 0;
 }
