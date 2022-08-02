@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/08/02 10:47:51 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/02 11:04:08 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char            *ft_strnstr(const char *s1, const char *s2, size_t len);
 int		        ft_strncmp(char *s1, char *s2, unsigned int n);
 size_t          ft_strlcat(char *dest, char *src, size_t size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+void            ft_striteri(char *s, void (*f)(unsigned int, char*));
+char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	*ft_memset(void *str, int ch, size_t n);
 void	*ft_memchr(const void *str, int ch, size_t n);
