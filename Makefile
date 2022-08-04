@@ -6,7 +6,7 @@
 #    By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/12 10:07:40 by aahsan            #+#    #+#              #
-#    Updated: 2022/08/02 12:22:44 by aahsan           ###   ########.fr        #
+#    Updated: 2022/08/04 17:20:17 by aahsan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ BONUS	= ft_lstnew.c	ft_lstadd_front.c	ft_lstlast.c	ft_lstadd_back.c \
 
 OBJS	= ${SRCS:.c=.o}
 OBJS_BONUS	= ${BONUS:.c=.o}
-HEADER	= includes
+HEADER	= .
 GCC		= gcc -Wall -Wextra -Werror
 FILE	= libft.a
 RM		= rm -f
@@ -43,7 +43,13 @@ bonus:	${OBJS_BONUS}
 clean:
 	${RM} ${OBJS}
 
+clean_bonus:
+	${RM} ${OBJS} ${OBJS_BONUS}
+
 fclean: clean
+	${RM} ${FILE}
+
+fclean_bonus: clean_bonus
 	${RM} ${FILE}
 
 re:		fclean all
