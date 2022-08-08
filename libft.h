@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/08/03 14:26:21 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/08 23:38:23 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 int		ft_atoi(const char *str);
@@ -72,5 +72,7 @@ int			ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void*));
+void		ft_lstiter(t_list *lst, void (*f)(void *));
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
