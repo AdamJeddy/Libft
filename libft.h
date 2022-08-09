@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/08/08 23:38:23 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/09 07:23:52 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 
 
 void    ft_putchar_fd(char c, int fd);

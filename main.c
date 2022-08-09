@@ -267,11 +267,36 @@ int main()
 		printf("%s\n", ft_itoa(1));
 		printf("%s\n", ft_itoa(10));
 		printf("%s\n", ft_itoa(100));
-*/
+
 	printf(COLOR_MAGENTA "\n\n*** ft_strtrim ***\n" COLOR_RESET);
 		printf("'%s' | '%s' \n", "   xxx   xxx", " x");
 		printf("'%s'\n", ft_strtrim("   xxx   xxx", " x"));
 	
+*/
+	printf(COLOR_MAGENTA "\n\n*** ft_split ***\n" COLOR_RESET);
+		char *str_split = "  tripouille   42     ";
+		char deli_split = ' ';
+		printf(COLOR_CYAN "Test string: " COLOR_RESET "'%s' | '%c'\n", str_split, deli_split);
+		char 	**temp = ft_split(str_split, deli_split);
+		printf("'%s'\n'%s'\n", temp[0], temp[1]);
+
+		str_split = "trap";
+		deli_split = 0;
+		printf(COLOR_CYAN "Test string: " COLOR_RESET "'%s' | '%c'\n", str_split, deli_split);
+		temp = ft_split(str_split, deli_split);
+		printf("'%s'\n", temp[0]);
+
+		str_split = "--1-2--3---4----5-----42";
+		deli_split = '-';
+		printf(COLOR_CYAN "Test string: " COLOR_RESET "'%s' | '%c'\n", str_split, deli_split);
+		temp = ft_split(str_split, deli_split);
+		printf("'%s'\n", temp[0]);
+		printf("'%s'\n", temp[1]);
+		printf("'%s'\n", temp[2]);
+		printf("'%s'\n", temp[3]);
+		printf("'%s'\n", temp[4]);
+		printf("'%s'\n", temp[5]);
+
 	return 0;
 }
 
