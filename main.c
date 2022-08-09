@@ -50,15 +50,17 @@ int main()
 		printf("\t[: %d\n", ft_isalpha('['));
 		printf("\t_: %d\n", ft_isalpha('_'));
 		printf("\t{: %d\n", ft_isalpha('{'));
-	
+
 	printf("\n\n*** ft_isdigit test ***\n");
     printf("Should give 1\n");
+		printf("\t%c: %d\n", 48, ft_isdigit(48));
 		printf("\t1: %d\n", ft_isdigit('1'));
-		printf("\t9: %d\n", ft_isdigit('9'));    
+		printf("\t%c: %d\n", 50, ft_isdigit(50));
+		printf("\t9: %d\n", ft_isdigit('9'));
     printf("Should give 0\n");
 		printf("\t/: %d\n", ft_isdigit('/'));
 		printf("\t:: %d\n", ft_isdigit(':'));
-    
+
 	printf("\n\n*** ft_toupper ***\n");
 		printf("\ta -> %c\n", ft_toupper('a'));
 		printf("\tz -> %c\n", ft_toupper('z'));
@@ -231,6 +233,7 @@ int main()
 		const char *smallstring = "Bar";
 		char *ptr = ft_strnstr(largestring, smallstring, 16);
 		ptr ? printf("\n%s\n", ptr) : printf("\nNULL\n");
+
 	printf(COLOR_MAGENTA "\n\n*** ft_atoi ***\n" COLOR_RESET);
 		printf("'   -1': %d\n", ft_atoi("   -1"));
 		printf("'   --1': %d\n", ft_atoi("   --1"));
@@ -239,6 +242,11 @@ int main()
 		printf("'   1234': %d\n", ft_atoi("   1234"));
 		printf("'   -1234': %d\n", ft_atoi("   -1234"));
 		printf("'-1234a': %d\n", ft_atoi("-1234a"));
+		printf("'9,223,372,036,854,775,807': %d\n", ft_atoi("9223372036854775807"));
+		printf("'-9,223,372,036,854,775,808': %d\n", ft_atoi("-9223372036854775808"));
+		printf("'9,223,372,036,854,775,807': %d\n", atoi("9223372036854775807"));
+		printf("'-9,223,372,036,854,775,808': %d\n", atoi("-9223372036854775808"));
+
 	printf(COLOR_MAGENTA "\n\n*** ft_strdup ***\n" COLOR_RESET);
 		char *v_strdup = ft_strdup(str);
 		v_strdup ? printf("%s\n", v_strdup) : printf("NULL\n");
@@ -259,6 +267,7 @@ int main()
 		char	*p_strjoin = ft_strjoin(str2, str3);
 		printf("%s\n", p_strjoin);
 		free(p_strjoin);
+
 	printf(COLOR_MAGENTA "\n\n*** ft_itoa ***\n" COLOR_RESET);
 		printf("%s\n", ft_itoa(-2147483648));
 		printf("%s\n", ft_itoa(-10));
@@ -272,7 +281,7 @@ int main()
 		printf("'%s' | '%s' \n", "   xxx   xxx", " x");
 		printf("'%s'\n", ft_strtrim("   xxx   xxx", " x"));
 	
-*/
+
 	printf(COLOR_MAGENTA "\n\n*** ft_split ***\n" COLOR_RESET);
 		char *str_split = "  tripouille   42     ";
 		char deli_split = ' ';
@@ -296,7 +305,7 @@ int main()
 		printf("'%s'\n", temp[3]);
 		printf("'%s'\n", temp[4]);
 		printf("'%s'\n", temp[5]);
-
+*/
 	return 0;
 }
 

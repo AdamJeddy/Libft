@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 07:22:28 by aahsan            #+#    #+#             */
-/*   Updated: 2022/08/04 14:52:57 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/09 11:23:22 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str = (char *) malloc(sizeof(char) * (len + 1));
 	else
 		str = (char *) malloc(sizeof(char) * (s_size + 1));
+	if (!str)
+		return (NULL);
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }

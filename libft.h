@@ -6,7 +6,7 @@
 /*   By: aahsan <aahsan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:36:47 by aahsan            #+#    #+#             */
-/*   Updated: 2022/08/09 07:23:52 by aahsan           ###   ########.fr       */
+/*   Updated: 2022/08/09 12:52:49 by aahsan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int ch);
 int		ft_isalpha(int alpha);
 int		ft_isdigit(int ch);
-int		ft_isprint(int ch);
+int		ft_isprint(int c);
 
 int		ft_isascii(int ch);
 int		ft_toupper(int ch);
-int		ft_tolower(int ch);
+int		ft_tolower(int c);
 
 size_t          ft_strlen(const char *str);
 char	        *ft_strchr(char *str, int num);
