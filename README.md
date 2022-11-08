@@ -82,7 +82,7 @@ To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There
 
 1. Clone this repo and cd into it, make sure it's called `libft`:
 		
-		git clone https://github.com/R4meau/libft
+		git clone https://github.com/AdamJeddy/Libft
 		cd libft/
 2. Copy all the source files to the root directory:
 	
