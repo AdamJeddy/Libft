@@ -1,4 +1,5 @@
-# Libft - 42AD - <strong> ** READ ME TAKEN FROM [@nickdotht](github.com/nickdotht) and adjusted accordingly ** </strong>
+# Libft - 42AD
+## **READ ME TAKEN FROM [@nickdotht](https://github.com/nickdotht) and adjusted accordingly**
 
 Implementation of some of the Standard C Library functions.
 
